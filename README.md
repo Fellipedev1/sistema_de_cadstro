@@ -1,2 +1,2 @@
 # sistema_de_cadstro
-Este aplicativo e feitro em python para cadastros de funcionarios
+Este aplicativo e feiot em python ele tem a primeir atela de cadastro dos usuarios se o susuario ja estiver um cadastro pre definido ele pode ascessar a segunda tela do aplicativo
