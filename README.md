@@ -1,2 +1,2 @@
 # sistema_de_cadstro
-Este aplicativo e feiot em python ele tem a primeir atela de cadastro dos usuarios se o susuario ja estiver um cadastro pre definido ele pode ascessar a segunda tela do aplicativo
+Este aplicativo é feito em Python. Ele possui a primeira tela de cadastro de usuários. Se o usuário já tiver um cadastro pré-definido, ele pode acessar a segunda tela do aplicativo.
