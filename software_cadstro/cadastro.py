@@ -46,7 +46,7 @@ def tela_login_sucesso():
     success_screen = tk.Toplevel()
     success_screen.title("Login Bem-Sucedido")
     success_screen.geometry("400x300")
-    label_success = tk.Label(success_screen, text="Este e o software dos coloboradores do ABC")
+    label_success = tk.Label(success_screen, text="Este é o software dos colaboradores do ABC")
     label_success.pack(pady=50)
 
     def voltar_para_login():
@@ -55,6 +55,49 @@ def tela_login_sucesso():
 
     button_voltar = tk.Button(success_screen, text="Voltar para o Login", command=voltar_para_login)
     button_voltar.pack()
+
+    def listar_informacoes_funcionarios():
+        informacoes = [
+            "Funcionário 1 - Cargo 1",
+            "Funcionário 2 - Cargo 2",
+            "Funcionário 3 - Cargo 3",
+            # Adicione mais informações fictícias aqui
+        ]
+        info_label["text"] = "\n".join(informacoes)
+
+    button_listar_funcionarios = tk.Button(success_screen, text="Listar Funcionários", command=listar_informacoes_funcionarios)
+    button_listar_funcionarios.pack(pady=10)
+
+    def mostrar_regras_empresa():
+        regras_window = tk.Toplevel()
+        regras_window.title("Regras da Empresa")
+        regras_window.geometry("400x300")
+        regras_label = tk.Label(regras_window, text="Aqui estão as regras da empresa:")
+        regras_label.pack(pady=20)
+        regras_text = tk.Text(regras_window, height=10, width=40)
+        regras_text.pack()
+        regras_text.insert(tk.END, "1. Cumprir rigorosamente os horários de trabalho estabelecidos.")
+        regras_text.insert(tk.END, "\n2. Tratar todos os colegas de trabalho com respeito e cortesia.")
+        regras_text.insert(tk.END, "\n3. Manter a confidencialidade de informações sensíveis da empresa.")
+        regras_text.insert(tk.END, "\n4. Utilizar os recursos da empresa de forma responsável e econômica.")
+        regras_text.insert(tk.END, "\n5. Relatar imediatamente qualquer problema ou irregularidade ao supervisor.")
+        regras_text.insert(tk.END, "\n6. Não é permitido o uso de dispositivos pessoais durante o horário de trabalho, exceto em casos autorizados.")
+        regras_text.insert(tk.END, "\n7. Seguir todas as políticas de segurança no local de trabalho.")
+        regras_text.insert(tk.END, "\n8. Não é permitido o assédio de qualquer tipo, incluindo assédio sexual.")
+        regras_text.insert(tk.END, "\n9. Cumprir todas as políticas de saúde e segurança no trabalho.")
+        regras_text.insert(tk.END, "\n10. Participar ativamente de treinamentos e programas de desenvolvimento profissional oferecidos pela empresa.")
+        regras_text.insert(tk.END, "\n11. Respeitar a propriedade intelectual e os direitos autorais de terceiros.")
+        regras_text.insert(tk.END, "\n12. Cumprir todas as leis e regulamentos aplicáveis relacionados ao trabalho.")
+        regras_text.insert(tk.END, "\n13. Evitar conflitos de interesse e divulgar qualquer possível conflito ao departamento de recursos humanos.")
+        regras_text.insert(tk.END, "\n14. Manter um ambiente de trabalho limpo e organizado.")
+        regras_text.insert(tk.END, "\n15. Promover a diversidade e a inclusão no local de trabalho.")
+        regras_text.config(state=tk.DISABLED)
+
+    button_mostrar_regras = tk.Button(success_screen, text="Mostrar Regras da Empresa", command=mostrar_regras_empresa)
+    button_mostrar_regras.pack()
+
+    info_label = tk.Label(success_screen, text="", font=("Times New Roman", 12))
+    info_label.pack()
 
 def limpar_campos():
     entry_usuario.delete(0, tk.END)
